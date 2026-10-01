@@ -1,0 +1,9 @@
+.monster-row {
+  border-top: 1px solid rgba(63, 117, 102, 0.4);
+}
+.monster-row:nth-of-type(even) {
+  background: rgba(239, 234, 224, 0.03);
+}
+.monster-row.isEditing {
+  background: rgba(184, 149, 90, 0.08);
+}
