@@ -1,0 +1,7 @@
+.monsters-table th {
+  font-weight: 600;
+  color: var(--gold);
+}
+.monsters-table thead a:hover {
+  color: var(--pearl);
+}
