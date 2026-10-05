@@ -8,12 +8,10 @@ static setApiURL(data){
     static async findAll(){
         const response = await fetch(this.apiURL + "monsters");
         return response.json();
-        
-        //retourne un tableau indexé d'objets litéraux que je transforme en objets monsters
+    //
     }
 
-        // Crée un nouveau monstre dans la base de données
-
+    // Crée un nouveau monstre dans la base de données
     static async create(monster){
         const response = await fetch(this.apiURL + "monsters", {
             method: "POST",
