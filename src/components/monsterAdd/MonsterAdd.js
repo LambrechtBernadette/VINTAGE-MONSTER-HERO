@@ -15,7 +15,7 @@ export default class MonsterAdd {
 
     createElement() {
         const aside = document.createElement("aside");
-        // crée l'objet HTML de balise <aside> 
+        // crée l'objet HTMLDOM de balise <aside> 
         aside.className = "deco-frame md:w-1/3 p-6 bg-[var(--murk)]/60 self-start";
         // lui donne du CSS
         aside.innerHTML = template();
@@ -45,7 +45,7 @@ export default class MonsterAdd {
         const created = await DB.create(monster);
         // on envoie à l'api les données de monster et on stocke la réponse de l'api dans created.
         this.mafonctionAnonyme?.(created);
-        // (monster) => monstersList.add(monster) ← éxécute la fonction anonmyme et lui donne created en entrée, dans "monster" 
+        // (monparam) => monstersList.add(monparam) ← éxécute la fonction anonmyme et lui donne created en entrée
         this.reset();
         //appelle la méthode reset() pour vider les champs du formulaire
     }

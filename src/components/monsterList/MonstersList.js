@@ -13,19 +13,22 @@ export default class MonstersList {
     }
 
     createElement() {
-        // crée un élément <section> pour contenir la liste des monstres, lui applique des classes CSS et y injecte le HTML du template. Retourne l'élément créé.
+        // crée un objet DOM <section> pour contenir la liste des monstres, lui applique des classes CSS et y injecte le HTML du template. Retourne l'élément créé.
         const section = document.createElement("section");
         section.className = "deco-frame md:w-2/3 p-6 bg-[var(--murk)]/40";
-        section.innerHTML = template();
+        section.innerHTML = template(); //appel template et le rend sous forme de string
         return section;
     }
 
     async load() {
         // charge tous les monstres depuis la base de données et les ajoute à la liste
         const monsters = await DB.findAll();
+        //monsters est une variable temporaire qui contient les donnnées récupérées depuis l'API, elle disparait à la fin de la fonction
         this.monsters = monsters.map((data) => this.createMonster(data));
         this.updateCount();
     }
+
+
 
     createMonster(data) {
         //data reçoit la réponse de l'API
