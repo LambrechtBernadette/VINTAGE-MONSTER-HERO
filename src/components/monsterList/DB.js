@@ -8,7 +8,6 @@ static setApiURL(data){
     static async findAll(){
         const response = await fetch(this.apiURL + "monsters");
         return response.json();
-    //
     }
 
     // Crée un nouveau monstre dans la base de données

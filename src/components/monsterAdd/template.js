@@ -30,5 +30,5 @@ export default function template() {
     </label>
 
     <button class="btn-submit btn btn-lipstick w-full py-3 px-4 text-lg">Add to the archive</button>
-  `;
+  `
 }

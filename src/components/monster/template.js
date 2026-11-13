@@ -37,3 +37,7 @@ export default function template(monster) {
     </tr>
   `;
 }
+/*<!-- t vient directement des éléments du tableau types. un par un, injecté automatiquement par .map() à chaque itération affichage/édition, mais pour l'édition c'est un <select>. La ligne types.map(...) génère dynamiquement une <option> par type possible, et ajoute selected sur celle qui correspond au type actuel du monstre — c'est un template literal imbriqué dans un autre. -->*/
+
+
+/*Une seule <tr> contient en permanence les deux versions (texte statique + champ de formulaire) pour chaque donnée. Il n'y a pas de re-génération du HTML au clic sur "Edit" : on bascule juste une classe CSS (isEditing) sur la ligne entière, ce qui montre/cache les bons éléments via CSS. C'est une technique simple pour éviter de reconstruire le DOM à chaque changement de mode.*/

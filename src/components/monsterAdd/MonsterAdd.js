@@ -3,9 +3,9 @@ import DB from "../monsterList/DB.js";
 
 export default class MonsterAdd {
  
-    constructor(onCreate) {
+    constructor(OnCreate) {
         //s'exécute automatiquement quand on écrit new monsterAdd
-        this.mafonctionAnonyme = onCreate;
+        this.mafonctionAnonyme = OnCreate;
         //stocke la fonction anonyme pour ne pas quelle disparaisse.
         this.element = this.createElement();
         //crée l'objet HTML qui va être inclu dans la page index.html

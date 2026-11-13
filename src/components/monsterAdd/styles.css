@@ -1,0 +1,17 @@
+/*
+// monster/template.js
+export default function template(monster) { ... }   // ← reçoit "monster" en paramètre
+
+// monsterAdd/template.js
+export default function template() { ... }           // ← aucun paramètre
+
+// monsterList/template.js
+export default function template() { ... }           // ← aucun paramètre
+
+Seul monster/template.js accepte un argument monster, donc c'est le seul qui a des données concrètes (monster.id, monster.name, monster.type, monster.dangerLevel, monster.year) à injecter avec ${...} dans son template literal.
+
+monsterAdd et monsterList sont des conteneurs statiques (formulaire vide, tableau vide), alors que monster est le "modèle répété" qui est appelé une fois par monstre, avec les vraies données de ce monstre à chaque appel — d'où la présence des ${monster.xxx}.
+
+Vous pouvez d'ailleurs le vérifier : dans MonstersList.js, le template de monster est probablement appelé en boucle (.map()/.forEach()) pour remplir le <tbody> du template de monsterList.
+
+*/
